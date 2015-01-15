@@ -71,5 +71,5 @@ As you visit your server's location at the default "/" location your server will
 
 This may not be the most awesome app in the history of apps, but you've just built yourself one. 
 
-
+Let's build something a little more meaningful in the next section.
 

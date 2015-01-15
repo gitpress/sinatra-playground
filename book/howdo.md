@@ -36,10 +36,10 @@ end
 
 Let's go through what's happening:
 
-1. We tell Sinatra what type of HTTP action is happening. This case, a simple "get"
-2. we define within a quote what route we are talking about. So, www.website.com rather than wwww.website.com/another-route
+1. We tell Sinatra what type of HTTP action we want to handle. This case, a simple "get" request
+2. we define within a quote what route we are talking about. So, "/" which would be www.website.com rather than wwww.website.com/another-route
 3. we start a Ruby "do end" loop. So, everything between that is  potentially actioned when a user hits our root website address
-4. Inside our "do end" loop we have just created a string with a  greeting.
+4. Inside our "do end" loop we have just created a string with a  greeting which will be sent back to any user visiting our site
 
 > HTTP verbs panel
 

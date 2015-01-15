@@ -6,7 +6,7 @@ get '/' do
   'How do, Sinatra!'
 end
 
-get '/:name' do
+get '/:name/:message' do
 
-  "How do #{params[:name]}!"
+  "How do #{params[:name]}, #{params[:message]} to you too!"
 end

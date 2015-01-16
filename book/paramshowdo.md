@@ -47,5 +47,51 @@ Let's see it in action now. Start your Sinatra server:
 ruby server.rb
 ```
 
-On our default route "/" we get back the same message as last section. Add something to the default route and see what you get back:
+On our default route "/" we get back the same message as last section. Add something to the default route and see what you get back. This is mine:
+
+![Picture of sinatra screenshot](book/screenshot-sinatra.png)
+
+So, as you can see I typed in "giantsquid" after the "/". That additional parameter is captured in the :name symbol. I am able to leverage params[:name] inside a string using the Ruby #{} method to print it out to the screen.
+
+Awesome.
+
+Let's add another paramater to capture. Add the following:
+
+```ruby
+get '/:name/:message' do
+
+  "How do #{params[:name]}, #{params[:message]} to you too!"
+end
+```
+
+Here we've added another parameter to capture, we then call it like we did last time, but with the :message symbol.
+
+Now, we need to restart our server to load up those changes.
+
+Press Ctrl+C in your terminal running your Sinatra app.
+
+Watch what it does when it shuts the server down.
+
+Now, let's start it again by running:
+
+```bash
+ruby server.rb
+```
+
+In your browser, write in a route like: /hello/goodbye and you should see a polite message back. Here's mine:
+
+![picture of doubled up params](book/sinatra-screenshot-routes.png)
+
+Smashing.
+
+You may be asking yourself "why would i ever do this?" but think about a complex app or API which lets you find a director with the first params and all of their films in the second.
+
+We wouldn't actually expect a user to manually type in those parameters into a URL, rather a search bar or set of buttons may create the server request but the result is similar. We ask Sinatra to capture the URL parameters and action some steps in response.
+
+In our case that is simply echoing our input, but in a fully-fledged app that could be accessing a database.
+
+
+
+
+
 

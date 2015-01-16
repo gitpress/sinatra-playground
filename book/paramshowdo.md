@@ -1,10 +1,48 @@
+# Handling URL parameters with Sinatra
+
 Let's continue working on our tiny Sinatra app but add the ability to handle URL parameters.
 
 By this we mean, the ability to have routes like: ```/author/1/``` , ```articles?title=learningSinatra&author=AndrewDuckworth``` or ```/andrew?=isniceguy```.
 
 So, we want our app be able to handle **author**, **articles** or **andrew** and the additional parameters of ```?title=learningSinatra&author=AndrewDuckworth``` etc. after them.
 
-If you've ever clicked on some blog spam on Twitter you may have noticed all of the following parameters used to track you and the origin of your arrival to the website.
+The reason this is important is that it enables us to create a blog or similar product which has a master page of our last 5 press releases called /article/ and a corresponding page for each individual article which lets people read those press releases.
+
+Now, if we could only implement routes if we named them, everytime we created a new press release we'd have to add code to our Sinatra app to handle that page. So, if we were up to five different articles we could have an app that looks like this:
+
+```ruby
+get '/article' do
+  #code
+end
+
+get '/article/1' do
+  #code
+end
+
+get '/article/2' do
+  #code
+end
+
+get '/article/3' do
+  #code
+end
+
+get '/article/4' do
+  #code
+end
+
+get '/article/5' do
+  #code
+end
+```
+
+That is pretty ugly. Imagine managing that!
+
+With paramaters we get to define what to do in a generic way with routes like ```article/1``` to ```article/9999```. 
+
+If you've ever clicked on some blog spam on Twitter you may have also noticed all of the following parameters used to track you and the origin of your arrival to the website.
+
+Being able to handle parameters like ```/?spyon=true``` means we can do interesting additonal things like track user behaviour, sort and query information
 
 In the tech world then, parameters is often sortened to params. So when you see params, they are talking about any additional parameteres or information provided with a URL or form submission etc.
 

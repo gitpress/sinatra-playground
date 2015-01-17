@@ -137,6 +137,8 @@ In the next section let's build our first substantial app.
 > If you are struggling for ideas, why not build a very simple calculator that takes the number provided in a first parameter and times it by the second.
 > ##### Hint
 > Remember, you can use Ruby as usual in your code, so setting variables to easily manipulate data is fine. If you encounter any error messages, read the carefully and google what you encounter
+> ##### Going large
+> Built that with ease? How about creating an entire calculator! Set a route with ```times/```, ```minus/``` routes etc. and program up a calculator. After the next section, where we'll learn about ERB and adding "views", add some to your app and create a website for your calculator so that people can enter the things they need to work out.
 
 
 

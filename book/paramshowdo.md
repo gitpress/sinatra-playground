@@ -42,7 +42,9 @@ With paramaters we get to define what to do in a generic way with routes like ``
 
 If you've ever clicked on some blog spam on Twitter you may have also noticed all of the following parameters used to track you and the origin of your arrival to the website.
 
-Being able to handle parameters like ```/?spyon=true``` means we can do interesting additonal things like track user behaviour, sort and query information
+> picture explaining this
+
+Being able to handle parameters like ```articles/?title=cats``` also means we can do interesting additonal things like track user behaviour, sort and query information in our database for our users by giving them all the cat articles their heart desires.
 
 In the tech world then, parameters is often sortened to params. So when you see params, they are talking about any additional parameteres or information provided with a URL or form submission etc.
 
@@ -68,8 +70,8 @@ Inside your do end loop write the following:
 
 Let's go over what's happening.
 
-1. Like the last section, we are returning a string 
-2. This time, we are using the the Ruby technique of ```#{}``` which injects into any string the result of some Ruby code
+1. Like the last section, we are returning a string, ie something in the double quotes
+2. This time we are using the the Ruby technique of ```#{}``` which injects into any string the result of some Ruby code
 3. Inside that we've injected the params techinque which lets us access the additional parameters of the URL
 4. We are then accessing the :name part of our URL paramaters. Which we do inside a square bracket next to the params.
 
@@ -127,6 +129,14 @@ You may be asking yourself "why would i ever do this?" but think about a complex
 We wouldn't actually expect a user to manually type in those parameters into a URL, rather a search bar or set of buttons may create the server request but the result is similar. We ask Sinatra to capture the URL parameters and action some steps in response.
 
 In our case that is simply echoing our input, but in a fully-fledged app that could be accessing a database.
+
+In the next section let's build our first substantial app.
+
+> ### Challenge
+> Now that you've seen how some basic Sinatra routes work, and how to access additional parameters try and make an app of your own. Don't worry about going overboard.
+> If you are struggling for ideas, why not build a very simple calculator that takes the number provided in a first parameter and times it by the second.
+> ##### Hint
+> Remember, you can use Ruby as usual in your code, so setting variables to easily manipulate data is fine. If you encounter any error messages, read the carefully and google what you encounter
 
 
 

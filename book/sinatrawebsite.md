@@ -161,9 +161,9 @@ in ```../viewsindex.erb```:
 </div>
 ```
 
-In this file we have added a class called jumbotron which gives us a large shoutout area with a grey background. Inside it we have defined a container area and within that a heading and paragraph element. The paragraph 
+In this file we have added a class called jumbotron which gives us a large shoutout area with a grey background. Inside it we have defined a container area and within that a heading and paragraph element.
 
-in ```../views/layout.erb```:
+in ```../views/layout.erb``` write:
 ```erb
 <!DOCTYPE html>
 <html lang="en">
@@ -187,6 +187,33 @@ in ```../views/layout.erb```:
 ```
 
 In this file what we have done is add our basic html page skeleton including the CSS and JS from a CDN. This is everything Bootstrap asks us to include.
+
+We have also provided the erb helper of <%= yield %> which inserts each individual view file inside it.
+
+So, in this case, the index.erb file will be inserted into the layout file (or if you prefer, the layout file will be wrapped around the index file)
+
+Let's build a few more routes.
+
+```ruby
+# add routes to server.rb file
+
+get '/about' do
+  erb :about
+end
+
+get '/contact' do
+  erb :contact
+end
+
+post '/contact' do
+  #we'll code this up later
+end
+
+```
+
+Here we added a get route for an about page where we'll write some info **about** us as well as host the portfolio.
+
+We also created a contact page and a **post** route which will let our users "post" their contact form to our server. From which we will wire up an email response later.
 
 
 ## Add our Scss

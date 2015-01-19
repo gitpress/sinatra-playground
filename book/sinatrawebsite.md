@@ -213,7 +213,7 @@ end
 
 Here we added a get route for an about page where we'll write some info **about** us as well as host the portfolio.
 
-We also created a contact page and a **post** route which will let our users "post" their contact form to our server. From which we will wire up an email response later.
+We also created a contact route and a **post** route which will let our users "post" their contact form to our server. From which we will wire up an email response later.
 
 
 ## Add our Scss

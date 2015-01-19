@@ -215,6 +215,8 @@ Here we added a get route for an about page where we'll write some info **about*
 
 We also created a contact route and a **post** route which will let our users "post" their contact form to our server. From which we will wire up an email response later.
 
+Let's create those templates now. In your /views/ folder create two templates, one called ```about.erb``` and the second ```contact.erb```. We don't need to create a template for the post method as that handles our users ***posting*** any forms we create.
+
 
 ## Add our Scss
 

@@ -240,20 +240,12 @@ Som create:
 ```html
 <!-- Feel free to write whatever you want! -->
 <div class="container">
-  <div class="col-md-8">
+  <div class="row">
     <h1>Hi, I'm Andrew</h1>
     <p>I'm a developer from the North of England!</p>
   </div>
 </div>
 ```
-
-
-
-## Add our Scss
-
-## Add our templates
-
-## Add some styles and structure
 
 ## Build a contact form
 

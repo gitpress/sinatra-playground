@@ -1,1 +1,11 @@
 <h1>Hi there CSV</h1>
+
+<% contents.each do |row|
+  title = row[:title]
+  summary = row[:summary]
+  author = row[:author] %>
+
+  <%= title %><br>
+  <%= summary %><br>
+  <%= author %><br>
+<% end %>

@@ -1,5 +1,5 @@
 require 'sinatra'
-# require "sinatra/reloader"
+require "sinatra/reloader"
 require 'csv'
 # set bind a codio addition to force port to be public
 set :bind, '0.0.0.0'

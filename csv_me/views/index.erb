@@ -1,11 +1,28 @@
-<h1>Hi there CSV</h1>
+<h1>Hi there CSV!</h1>
 
-<% contents.each do |row|
-  title = row[:title]
-  summary = row[:summary]
-  author = row[:author] %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Test.csv</div>
 
-  <%= title %><br>
-  <%= summary %><br>
-  <%= author %><br>
-<% end %>
+  <!-- Table -->
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr> 
+        <th>Title</th>
+        <th>Author</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% contents.each do |row| %>
+      <tr>
+        <td><%= row[:title] %></td>
+        <td><%= row[:author] %></td>
+        <td><%= row[:summary] %></td>
+      </tr>
+      <% end %>
+    </tbody>
+
+  </table>
+</div>
